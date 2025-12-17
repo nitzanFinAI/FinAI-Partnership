@@ -3,134 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinAI - שותפות עסקית</title>
+    <title>FinAI - מודל השותפות</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'rubik': ['Rubik', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Rubik', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .slide-enter { animation: slideIn 0.5s ease-out; }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .highlight-col { background: rgba(255, 255, 255, 0.2); }
     </style>
 </head>
-<body class="gradient-bg min-h-screen text-white">
-    <!-- FinAI Logo -->
-    <div class="absolute top-8 right-8 z-10">
-        <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-            <span class="text-2xl font-bold text-white">FinAI</span>
-        </div>
-    </div>
+<body class="gradient-bg min-h-screen flex flex-col">
+    <!-- Header עם לוגו -->
+    <header class="text-center py-6">
+        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=FinAI" alt="FinAI Logo" class="mx-auto rounded-lg">
+    </header>
 
-    
-<div class="container mx-auto px-8 py-16 h-screen flex flex-col justify-center">
-    <div class="text-center slide-enter">
-        <h1 class="text-4xl font-bold mb-4 leading-tight">
-            מודל השותפות
+    <!-- תוכן ראשי -->
+    <main class="flex-1 flex flex-col items-center justify-center px-8">
+        <h1 class="text-5xl font-bold text-white mb-4 text-center">
+            מודל השותפות שלנו
         </h1>
-        <h2 class="text-xl font-light mb-16 text-blue-100">
-            למי שרוצה להרחיב את השירותים ללקוחות קיימים
-        </h2>
+        <p class="text-xl text-gray-200 mb-12 text-center">
+            שילוב מושלם של היכרויות, מומחיות ותוצאות
+        </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <!-- Column 1: אתם מביאים -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <h3 class="text-2xl font-bold mb-6 text-blue-300">אתם מביאים</h3>
-                <ul class="space-y-4 text-right">
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את הלקוחות</span>
-                        <i class="fas fa-users text-blue-300"></i>
-                    </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את הקשר</span>
-                        <i class="fas fa-handshake text-blue-300"></i>
-                    </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את האמון</span>
-                        <i class="fas fa-heart text-blue-300"></i>
-                    </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את הצורך</span>
-                        <i class="fas fa-bullseye text-blue-300"></i>
-                    </li>
-                </ul>
-            </div>
+        <!-- שלושה עמודות -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
 
-            <!-- Column 2: אנחנו מספקים -->
-            <div class="bg-white/15 backdrop-blur-sm rounded-xl p-8 border-2 border-yellow-300 hover:bg-white/25 transition-all duration-300 relative">
-                <h3 class="text-2xl font-bold mb-4 text-yellow-300">אנחנו מספקים</h3>
-                <div class="bg-yellow-300 text-gray-900 px-4 py-2 rounded-lg font-bold text-center mb-6">
-                    האחריות שלנו
+            <!-- עמודה ימינה: אתם מביאים -->
+            <div class="glass rounded-xl p-8 text-center">
+                <div class="text-blue-300 text-5xl mb-6">
+                    <i class="fas fa-handshake"></i>
                 </div>
-                <ul class="space-y-4 text-right">
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את הטכנולוגיה</span>
-                        <i class="fas fa-laptop-code text-yellow-300"></i>
+                <h2 class="text-2xl font-bold text-white mb-4">אתם מביאים</h2>
+                <h3 class="text-lg font-semibold text-yellow-300 mb-6">הקשר והאמון</h3>
+                <ul class="text-right space-y-3">
+                    <li class="text-gray-200 flex items-start">
+                        <i class="fas fa-check text-green-400 ml-2 mt-1"></i>
+                        <span>קשרים עסקיים קיימים עם לקוחות פוטנציאליים</span>
                     </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את הידע</span>
-                        <i class="fas fa-graduation-cap text-yellow-300"></i>
+                    <li class="text-gray-200 flex items-start">
+                        <i class="fas fa-check text-green-400 ml-2 mt-1"></i>
+                        <span>אמון ומוניטין שנבנו לאורך שנים</span>
                     </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את התמיכה</span>
-                        <i class="fas fa-life-ring text-yellow-300"></i>
-                    </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">את התוצאות</span>
-                        <i class="fas fa-trophy text-yellow-300"></i>
+                    <li class="text-gray-200 flex items-start">
+                        <i class="fas fa-check text-green-400 ml-2 mt-1"></i>
+                        <span>המלצות חמות ומוכחות</span>
                     </li>
                 </ul>
             </div>
 
-            <!-- Column 3: אתם מרוויחים -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <h3 class="text-2xl font-bold mb-6 text-green-300">אתם מרוויחים</h3>
-                <ul class="space-y-4 text-right">
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">עמלות</span>
-                        <i class="fas fa-dollar-sign text-green-300"></i>
+            <!-- עמודה מרכזית: אנחנו מספקים -->
+            <div class="glass highlight-col rounded-xl p-8 text-center border-2 border-white">
+                <div class="text-yellow-300 text-5xl mb-6">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white mb-4">אנחנו מספקים</h2>
+                <h3 class="text-lg font-semibold text-yellow-300 mb-2">השירות והתפעול</h3>
+                <p class="text-yellow-200 text-sm mb-6 font-medium">האחריות שלנו</p>
+                <ul class="text-right space-y-3">
+                    <li class="text-gray-100 flex items-start">
+                        <i class="fas fa-star text-yellow-400 ml-2 mt-1"></i>
+                        <span>שירות מקצועי ואמין ברמה הגבוהה ביותר</span>
                     </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">לקוחות מרוצים</span>
-                        <i class="fas fa-smile text-green-300"></i>
+                    <li class="text-gray-100 flex items-start">
+                        <i class="fas fa-star text-yellow-400 ml-2 mt-1"></i>
+                        <span>נוכחות פיזית ופגישות אצל הלקוח</span>
                     </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">שירות מתקדם</span>
-                        <i class="fas fa-rocket text-green-300"></i>
-                    </li>
-                    <li class="flex items-center justify-end text-lg">
-                        <span class="ml-3">יתרון תחרותי</span>
-                        <i class="fas fa-chess-queen text-green-300"></i>
+                    <li class="text-gray-100 flex items-start">
+                        <i class="fas fa-star text-yellow-400 ml-2 mt-1"></i>
+                        <span>ניהול מקצה לקצה של כל הפרויקט</span>
                     </li>
                 </ul>
             </div>
+
+            <!-- עמודה שמאלה: אתם מרוויחים -->
+            <div class="glass rounded-xl p-8 text-center">
+                <div class="text-green-400 text-5xl mb-6">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-white mb-4">אתם מרוויחים</h2>
+                <h3 class="text-lg font-semibold text-yellow-300 mb-6">התוצאה המשתלמת</h3>
+                <ul class="text-right space-y-3">
+                    <li class="text-gray-200 flex items-start">
+                        <i class="fas fa-dollar-sign text-green-400 ml-2 mt-1"></i>
+                        <span>עמלות אטרקטיביות על כל עסקה מוצלחת</span>
+                    </li>
+                    <li class="text-gray-200 flex items-start">
+                        <i class="fas fa-dollar-sign text-green-400 ml-2 mt-1"></i>
+                        <span>חיזוק הקשרים העסקיים הקיימים</span>
+                    </li>
+                    <li class="text-gray-200 flex items-start">
+                        <i class="fas fa-dollar-sign text-green-400 ml-2 mt-1"></i>
+                        <span>הכנסה פסיבית ללא השקעת זמן</span>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-    </div>
-</div>
+    </main>
 
-
-    
+    <!-- ניווט -->
+    <nav class="flex justify-between items-center p-8">
         <button onclick="window.location.href='slide2.html'" 
-                class="fixed bottom-8 left-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg">
-            ← הקודם
+                class="glass rounded-lg px-6 py-3 text-white font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <i class="fas fa-arrow-right mr-2"></i> חזרה
         </button>
+
+        <div class="flex space-x-2">
+            <span class="w-3 h-3 bg-white rounded-full opacity-50"></span>
+            <span class="w-3 h-3 bg-white rounded-full opacity-50"></span>
+            <span class="w-3 h-3 bg-white rounded-full"></span>
+            <span class="w-3 h-3 bg-white rounded-full opacity-50"></span>
+        </div>
+
         <button onclick="window.location.href='slide4.html'" 
-                class="fixed bottom-8 right-8 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg">
-            הבא →
+                class="glass rounded-lg px-6 py-3 text-white font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            הבא <i class="fas fa-arrow-left mr-2"></i>
         </button>
+    </nav>
 </body>
 </html>
