@@ -1,111 +1,97 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="he">
+<html lang="he" dir="rtl">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
-<title>FinAI - מוכנים להתחיל?</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
-<style>
-body {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8fafc;
-}
-.slide-container {
-    width: 1280px;
-    height: 720px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    margin: 0 auto;
-}
-.text-finai-blue { color: #0ea5e9; }
-.bg-finai-blue { background-color: #0ea5e9; }
-.text-finai-dark { color: #0f172a; }
-.bg-finai-light { background-color: #e0f2fe; }
-.blob-shape {
-    position: absolute;
-    border-radius: 50%;
-    z-index: 0;
-}
-.kpi-card {
-    background: white;
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f1f5f9;
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    padding: 1.5rem;
-}
-.kpi-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinAI - שותפות עסקית</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'rubik': ['Rubik', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Rubik', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .slide-enter { animation: slideIn 0.5s ease-out; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-<div class="slide-container shadow-2xl">
-<div class="absolute top-8 left-8 z-30 flex items-center gap-2">
-<div class="w-8 h-8 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold text-lg">F</div>
-<span class="text-xl font-bold text-slate-800 tracking-tight">FinAI</span>
+<body class="gradient-bg min-h-screen text-white">
+    <!-- FinAI Logo -->
+    <div class="absolute top-8 right-8 z-10">
+        <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
+            <span class="text-2xl font-bold text-white">FinAI</span>
+        </div>
+    </div>
+
+    
+<div class="container mx-auto px-8 py-16 h-screen flex flex-col justify-center">
+    <div class="text-center slide-enter max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4 leading-tight">
+            איך זה עובד?
+        </h1>
+        <h2 class="text-xl font-light mb-16 text-blue-100">
+            תהליך פשוט בשלושה שלבים
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- Step 1 -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 relative">
+                <div class="absolute -top-4 right-1/2 transform translate-x-1/2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                    1
+                </div>
+                <h3 class="text-xl font-bold mb-4 mt-4 text-blue-300">שיחת היכרות קצרה</h3>
+                <p class="text-blue-100">נכיר ונבין את הצרכים</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 relative">
+                <div class="absolute -top-4 right-1/2 transform translate-x-1/2 bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                    2
+                </div>
+                <h3 class="text-xl font-bold mb-4 mt-4 text-green-300">הצגה משותפת</h3>
+                <p class="text-blue-100">נראה איך זה עובד בפועל</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 relative">
+                <div class="absolute -top-4 right-1/2 transform translate-x-1/2 bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+                    3
+                </div>
+                <h3 class="text-xl font-bold mb-4 mt-4 text-purple-300">התחילו להרוויח</h3>
+                <p class="text-blue-100">שותפות מותאמת אישית</p>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="bg-white/15 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h2 class="text-2xl font-bold mb-6 text-center">
+                בואו נדבר - הזמן לצמוח ביחד הוא עכשיו
+            </h2>
+            <button class="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-200 shadow-lg transform hover:scale-105">
+                קבעו פגישה חינם
+            </button>
+        </div>
+    </div>
 </div>
-<div class="blob-shape bg-blue-50 w-[900px] h-[900px] -top-60 -right-60 opacity-30"></div>
-<div class="blob-shape bg-slate-50 w-[700px] h-[700px] -bottom-40 -left-40 opacity-40"></div>
-<div class="absolute top-0 right-0 w-full h-2 bg-blue-500 z-20"></div>
-<div class="relative z-10 flex-1 flex flex-col px-16 py-8">
-<div class="text-center mb-16">
-<h1 class="text-5xl font-black text-slate-800 mb-6">
-<span class="text-blue-500">מוכנים</span> להתחיל?
-</h1>
-<p class="text-2xl text-slate-600 font-medium">תהליך פשוט ומהיר בדרך לשותפות מנצחת</p>
-</div>
-<div class="max-w-6xl mx-auto mb-16">
-<div class="flex items-center justify-between relative">
-<!-- Process line -->
-<div class="absolute top-1/2 left-0 right-0 h-1 bg-blue-200 transform -translate-y-1/2 z-0"></div>
-<!-- Step 3 -->
-<div class="relative z-10 flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-lg border-2 border-slate-100 hover:shadow-xl transition-all duration-300 w-80">
-<div class="w-16 h-16 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center text-3xl font-black mb-4">3</div>
-<h3 class="text-2xl font-bold text-slate-800 mb-3">התחילו להרוויח</h3>
-<p class="text-slate-600 font-medium leading-relaxed">מרגע שהחברה מצטרפת לשירות, אתם מקבלים עמלה חודשית קבועה</p>
-</div>
-<!-- Step 2 -->
-<div class="relative z-10 flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-lg border-2 border-slate-100 hover:shadow-xl transition-all duration-300 w-80">
-<div class="w-16 h-16 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center text-3xl font-black mb-4">2</div>
-<h3 class="text-2xl font-bold text-slate-800 mb-3">הצגה משותפת</h3>
-<p class="text-slate-600 font-medium leading-relaxed">ניגש ביחד לחברות עם הצעת הערך הייחודית והמותאמת שלנו</p>
-</div>
-<!-- Step 1 -->
-<div class="relative z-10 flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-xl border-2 border-blue-200 hover:shadow-2xl transition-all duration-300 w-80 transform hover:-translate-y-2">
-<div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-3xl font-black mb-4">1</div>
-<h3 class="text-2xl font-bold text-slate-800 mb-3">שיחת היכרות קצרה</h3>
-<p class="text-slate-600 font-medium leading-relaxed">נכיר, נבין את הקשרים והחברות שאתם עובדים איתן ונתאם ציפיות</p>
-</div>
-</div>
-</div>
-<!-- CTA Section -->
-<div class="text-center">
-<div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-8 rounded-2xl shadow-xl max-w-3xl mx-auto transform hover:scale-105 transition-all duration-300">
-<h2 class="text-3xl font-bold mb-4">בואו נדבר - הזמן לצמוח ביחד הוא עכשיו</h2>
-</div>
-</div>
-</div>
-</div>
-<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-4 z-50">
-    <a href="slide3.html" class="inline-flex items-center gap-2 px-6 py-3 bg-slate-200 text-slate-700 font-bold rounded-lg shadow-lg hover:bg-slate-300 transition-all duration-300">
-        <i class="fa-solid fa-arrow-right"></i> הקודם
-    </a></div>
+
+
+    
+        <button onclick="window.location.href='slide3.html'" 
+                class="fixed bottom-8 left-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg">
+            ← הקודם
+        </button>
 </body>
 </html>
