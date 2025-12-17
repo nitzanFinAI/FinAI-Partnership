@@ -1,175 +1,108 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+
+<html dir="rtl" lang="he">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinAI - שותפות עסקית</title>
-    <style>
-        * {
+<meta charset="utf-8"/>
+<meta content="width=1280, height=720, initial-scale=1.0" name="viewport"/>
+<title>FinAI - מי אנחנו</title>
+<!-- Tailwind CSS -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<!-- Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Google Fonts: Rubik for Hebrew -->
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Rubik', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f8fafc; /* Slate 50 */
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            overflow: hidden;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
+            flex-direction: column;
+            background-color: #ffffff;
         }
+        /* Custom FinAI Blue Palette */
+        .text-finai-blue { color: #0ea5e9; } /* Sky 500 */
+        .text-finai-dark { color: #0f172a; } /* Slate 900 */
+        .bg-finai-light { background-color: #e0f2fe; } /* Sky 100 */
         
-        .container {
-            max-width: 1200px;
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 40px;
-        }
-        
-        h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-        
-        .hook {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            border-radius: 20px;
-            font-size: 2rem;
-            font-weight: 600;
-            margin: 40px auto;
-            max-width: 900px;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .feature {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            padding: 30px 20px;
-            border-radius: 15px;
-            transition: transform 0.3s;
-        }
-        
-        .feature:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-        
-        .feature h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-        
-        .nav {
-            position: fixed;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            background: rgba(255,255,255,0.2);
-            padding: 15px 30px;
-            border-radius: 50px;
-        }
-        
-        .nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 2rem;
-            padding: 10px 20px;
-            background: rgba(255,255,255,0.2);
+        .blob-shape {
+            position: absolute;
             border-radius: 50%;
-            transition: background 0.3s;
-        }
-        
-        .nav a:hover {
-            background: rgba(255,255,255,0.3);
-        }
-        
-        .page-num {
-            font-weight: bold;
-            font-size: 1.2rem;
+            z-index: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">FinAI</div>
-        
-        <h1>החוויה הפיננסית<br>הטובה ביותר בישראל</h1>
-        
-        <p class="subtitle">ליווי פיננסי אישי לעובדים, בכל שלב בחיים</p>
-        
-        <div class="hook">
-            "מחלקה פיננסית שלמה בתוך הארגון - בלי להעסיק אף אחד"
-        </div>
-        
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🏢</div>
-                <h3>נוכחות פיזית במשרד</h3>
-                <p>פנים מול פנים</p>
-            </div>
-            
-            <div class="feature">
-                <div class="feature-icon">👥</div>
-                <h3>ליווי אישי לכל עובד</h3>
-                <p>מותאם לצרכים האישיים</p>
-            </div>
-            
-            <div class="feature">
-                <div class="feature-icon">⭐</div>
-                <h3>מומחים מהשורה הראשונה</h3>
-                <p>המקצוענים הטובים ביותר</p>
-            </div>
-            
-            <div class="feature">
-                <div class="feature-icon">📱</div>
-                <h3>זמינות 24/7</h3>
-                <p>מענה מהיר ומיידי</p>
-            </div>
-        </div>
-    </div>
-    
-    <div class="nav">
-        <span class="page-num">1 / 4</span>
-        <a href="slide2.html">›</a>
-    </div>
-    
-    <script>
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowRight' || e.key === ' ') {
-                window.location.href = 'slide2.html';
-            }
-        });
-    </script>
+<div class="slide-container shadow-2xl">
+<!-- Background Decorations (Minimalist) -->
+<div class="blob-shape bg-blue-50 w-[900px] h-[900px] -top-80 -left-64 opacity-50"></div>
+<div class="blob-shape bg-blue-50 w-[700px] h-[700px] -bottom-40 -right-32 opacity-50"></div>
+<div class="absolute top-0 right-0 w-full h-2 bg-blue-500"></div>
+<!-- Content Wrapper -->
+<div class="relative z-10 flex-1 flex flex-col items-center justify-center px-16 py-8">
+<!-- Logo / Brand (Reduced Size) -->
+<div class="absolute top-8 left-8 flex items-center gap-3">
+<div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-white shadow-md">
+<i class="fa-solid fa-chart-line text-sm"></i>
+</div>
+<p class="text-xl font-bold text-slate-700 tracking-wider">FinAI</p>
+</div>
+<!-- Main Title Section (Reduced Size) -->
+<div class="text-center mb-10 w-full max-w-5xl mt-8">
+<h1 class="text-6xl font-black text-slate-800 mb-0 leading-tight">
+                    החוויה הפיננסית<br/>
+<span class="text-blue-500">הטובה ביותר בישראל</span>
+</h1>
+</div>
+<!-- HOOK Section (Clean Box - Reduced Size) -->
+<div class="w-full max-w-4xl bg-white border-r-4 border-blue-500 shadow-lg rounded-lg p-6 mb-16 transform hover:scale-105 transition-transform duration-300">
+<p class="text-3xl text-center font-bold text-slate-800 leading-normal">
+                    "מחלקה פיננסית שלמה בתוך הארגון - <span class="text-blue-500">בלי להעסיק אף אחד</span>"
+                </p>
+</div>
+<!-- Features Grid (Minimalist & Proportional) -->
+<div class="grid grid-cols-4 gap-10 w-full max-w-6xl px-4">
+<!-- Feature 1 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-3 shadow-sm group-hover:bg-blue-100 transition-colors duration-300">
+<i class="fa-solid fa-building-user"></i>
+</div>
+<h3 class="text-lg font-bold text-slate-800 mb-1">נוכחות פיזית במשרד</h3>
+<p class="text-sm text-slate-500 font-medium">פנים מול פנים</p>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-3 shadow-sm group-hover:bg-blue-100 transition-colors duration-300">
+<i class="fa-solid fa-user-group"></i>
+</div>
+<h3 class="text-lg font-bold text-slate-800 mb-1">ליווי אישי לכל עובד</h3>
+<p class="text-sm text-slate-500 font-medium">מותאם לצרכים האישיים</p>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-3 shadow-sm group-hover:bg-blue-100 transition-colors duration-300">
+<i class="fa-solid fa-medal"></i>
+</div>
+<h3 class="text-lg font-bold text-slate-800 mb-1">מומחים מהשורה הראשונה</h3>
+<p class="text-sm text-slate-500 font-medium">המקצוענים הטובים ביותר</p>
+</div>
+<!-- Feature 4 -->
+<div class="flex flex-col items-center text-center group">
+<div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-3 shadow-sm group-hover:bg-blue-100 transition-colors duration-300">
+<i class="fa-solid fa-mobile-screen-button"></i>
+</div>
+<h3 class="text-lg font-bold text-slate-800 mb-1">זמינות 24/7</h3>
+<p class="text-sm text-slate-500 font-medium">מענה מהיר ומיידי</p>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>
