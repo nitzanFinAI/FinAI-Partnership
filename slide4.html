@@ -3,95 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinAI - שותפות עסקית</title>
+    <title>FinAI - בואו נתחיל</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'rubik': ['Rubik', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <style>
         body { font-family: 'Rubik', sans-serif; }
         .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-        .slide-enter { animation: slideIn 0.5s ease-out; }
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
     </style>
 </head>
-<body class="gradient-bg min-h-screen text-white">
-    <!-- FinAI Logo -->
-    <div class="absolute top-8 right-8 z-10">
-        <div class="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-            <span class="text-2xl font-bold text-white">FinAI</span>
-        </div>
-    </div>
+<body class="gradient-bg min-h-screen flex flex-col">
+    <!-- Header עם לוגו -->
+    <header class="text-center py-6">
+        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=FinAI" alt="FinAI Logo" class="mx-auto rounded-lg">
+    </header>
 
-    
-<div class="container mx-auto px-8 py-16 h-screen flex flex-col justify-center">
-    <div class="text-center slide-enter max-w-4xl mx-auto">
-        <h1 class="text-4xl font-bold mb-4 leading-tight">
+    <!-- תוכן ראשי -->
+    <main class="flex-1 flex flex-col items-center justify-center px-8">
+        <h1 class="text-5xl font-bold text-white mb-4 text-center">
             איך זה עובד?
         </h1>
-        <h2 class="text-xl font-light mb-16 text-blue-100">
-            תהליך פשוט בשלושה שלבים
-        </h2>
+        <p class="text-xl text-gray-200 mb-12 text-center">
+            תהליך פשוט ויעיל בשלושה שלבים
+        </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <!-- Step 1 -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 relative">
-                <div class="absolute -top-4 right-1/2 transform translate-x-1/2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
-                    1
-                </div>
-                <h3 class="text-xl font-bold mb-4 mt-4 text-blue-300">שיחת היכרות קצרה</h3>
-                <p class="text-blue-100">נכיר ונבין את הצרכים</p>
-            </div>
+        <!-- תהליך בשלושה שלבים -->
+        <div class="max-w-4xl w-full mb-12">
+            <div class="relative">
+                <!-- קו חיבור -->
+                <div class="absolute top-16 right-0 left-0 h-1 bg-gradient-to-l from-blue-400 via-purple-500 to-pink-400 hidden md:block"></div>
 
-            <!-- Step 2 -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 relative">
-                <div class="absolute -top-4 right-1/2 transform translate-x-1/2 bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
-                    2
-                </div>
-                <h3 class="text-xl font-bold mb-4 mt-4 text-green-300">הצגה משותפת</h3>
-                <p class="text-blue-100">נראה איך זה עובד בפועל</p>
-            </div>
+                <!-- שלבי התהליך -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
 
-            <!-- Step 3 -->
-            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 relative">
-                <div class="absolute -top-4 right-1/2 transform translate-x-1/2 bg-purple-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
-                    3
+                    <!-- שלב 1 -->
+                    <div class="glass rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+                            1
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">היכרות וזיהוי הזדמנויות</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            פגישת היכרות בה נבין את הקשרים העסקיים שלכם ונזהה הזדמנויות משותפות
+                        </p>
+                    </div>
+
+                    <!-- שלב 2 -->
+                    <div class="glass rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+                            2
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">החתמה על הסכם שותפות</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            חתימה על הסכם שותפות שמגדיר בבירור את התנאים, האחריות וחלוקת הרווחים
+                        </p>
+                    </div>
+
+                    <!-- שלב 3 -->
+                    <div class="glass rounded-xl p-8 text-center">
+                        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">התחלת עבודה ויצירת הכנסה</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            אתם מפנים לקוחות, אנחנו עושים את העבודה, ואתם מקבלים חלק מהרווחים
+                        </p>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold mb-4 mt-4 text-purple-300">התחילו להרוויח</h3>
-                <p class="text-blue-100">שותפות מותאמת אישית</p>
             </div>
         </div>
 
-        <!-- CTA Section -->
-        <div class="bg-white/15 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h2 class="text-2xl font-bold mb-6 text-center">
-                בואו נדבר - הזמן לצמוח ביחד הוא עכשיו
-            </h2>
-            <button class="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg text-lg font-bold transition-all duration-200 shadow-lg transform hover:scale-105">
-                קבעו פגישה חינם
+        <!-- קריאה לפעולה -->
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">מוכנים להתחיל?</h2>
+            <p class="text-lg text-gray-200 mb-8">בואו נדבר</p>
+
+            <!-- כפתור CTA דק יותר -->
+            <button class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors shadow-lg border-2 border-blue-500">
+                <i class="fas fa-phone ml-2"></i>
+                צור קשר עכשיו
             </button>
         </div>
-    </div>
-</div>
+    </main>
 
-
-    
+    <!-- ניווט -->
+    <nav class="flex justify-between items-center p-8">
         <button onclick="window.location.href='slide3.html'" 
-                class="fixed bottom-8 left-8 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg">
-            ← הקודם
+                class="glass rounded-lg px-6 py-3 text-white font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            <i class="fas fa-arrow-right mr-2"></i> חזרה
         </button>
+
+        <div class="flex space-x-2">
+            <span class="w-3 h-3 bg-white rounded-full opacity-50"></span>
+            <span class="w-3 h-3 bg-white rounded-full opacity-50"></span>
+            <span class="w-3 h-3 bg-white rounded-full opacity-50"></span>
+            <span class="w-3 h-3 bg-white rounded-full"></span>
+        </div>
+
+        <button onclick="window.location.href='index.html'" 
+                class="glass rounded-lg px-6 py-3 text-white font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+            חזור להתחלה <i class="fas fa-home mr-2"></i>
+        </button>
+    </nav>
 </body>
 </html>
